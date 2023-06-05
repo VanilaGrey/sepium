@@ -1,1 +1,18 @@
 {% extends '../main.twig' %}
+
+{% block main %}
+	<section class="catalog container">
+		<div class="catalog__header">
+			<p class="catalog__ad">{{ ad }}</p>
+			<h1 class="catalog__title">{{ label }}</h1>
+		</div>
+
+		<ul class="catalog__list">
+			{% for item in products %}
+				<li class="catalog__item">
+					{% include '../blocks/product.twig' with item %}
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+{% endblock %}

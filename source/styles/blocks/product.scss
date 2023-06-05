@@ -1,0 +1,26 @@
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+
+	@include media-mobile {
+		text-align: center;
+	}
+}
+
+.product__mark {
+	margin: 20px 0 10px 10px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 16px;
+	color: $color-grey;
+}
+
+.product__heading {
+	margin: 0 0 0 10px;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 27px;
+	color: $color-black;
+}

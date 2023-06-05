@@ -1,12 +1,15 @@
-export default ({ error, pageName, status }) => ({
-	appData: {
-		page: {
-			error,
-			pageName,
-			status
-		}
+export default () => ({
+	description: 'sepium-test',
+	getImages(filename, additions = {}) {
+		const image = Object.assign(additions, {
+			default: `images/${filename}.jpg`,
+			default2x: `images/${filename}@2x.jpg`,
+			webp: `images/${filename}.webp`,
+			webp2x: `images/${filename}@2x.webp`
+		});
+
+		return image;
 	},
-	description: 'My project',
-	pixelperfect: JSON.stringify({ breakpoints: [1200], ext: 'webp' }),
-	projectName: 'My app'
+	pixelperfect: JSON.stringify({ breakpoints: [1280], ext: 'webp' }),
+	projectName: 'sepium'
 });
